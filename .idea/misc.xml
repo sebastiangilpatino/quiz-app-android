@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/JGILPATI/AndroidStudioProjects/Questions/app/src/main/res/layout/activity_login.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/JGILPATI/AndroidStudioProjects/Questions/app/src/main/res/layout/activity_main2.xml" value="0.10729166666666666" />
         <entry key="..\:/Users/JGILPATI/AndroidStudioProjects/Questions/app/src/main/res/layout/fragment_add_note.xml" value="0.14907407407407408" />
         <entry key="..\:/Users/JGILPATI/AndroidStudioProjects/Questions/app/src/main/res/layout/note_layout.xml" value="0.1" />
       </map>
