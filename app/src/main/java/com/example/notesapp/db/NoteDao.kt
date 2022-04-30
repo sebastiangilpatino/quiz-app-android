@@ -8,13 +8,20 @@ import androidx.room.*
 @Dao
 interface NoteDao {
     @Insert
-    suspend fun addNote(note:Note)
+    suspend fun addNote(note: Note)
+
     @Query("SELECT * FROM NOTE ORDER BY id DESC")
-    suspend fun getAllNotes():List<Note>
+    suspend fun getAllNotes(): List<Note>
+
+    @Query("SELECT * FROM NOTE ORDER BY id DESC LIMIT 1 OFFSET 1")
+    suspend fun getOneNote(): Note
+
     @Insert
     suspend fun addMultipleNotes(vararg note: Note)
+
     @Update
-    suspend fun updateNote(note:Note)
+    suspend fun updateNote(note: Note)
+
     @Delete
     suspend fun deleteNote(note: Note)
 }
