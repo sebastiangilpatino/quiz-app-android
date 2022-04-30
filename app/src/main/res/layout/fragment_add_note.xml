@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.AddNoteFragment">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:id="@+id/title"
+        android:hint="Question"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large">
+    </EditText>
+
+    <EditText
+        android:id="@+id/editNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:hint="Answer 1"
+        android:inputType="textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="20dp"
+        android:gravity="top"/>
+
+    <EditText
+        android:id="@+id/editNote2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNote"
+        android:hint="Answer 2"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="20dp"
+        android:gravity="top"/>
+
+    <EditText
+        android:id="@+id/editNote3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNote2"
+        android:hint="Answer 3"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="20dp"
+        android:gravity="top"/>
+
+    <EditText
+        android:id="@+id/editNote4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNote3"
+        android:hint="Answer 4"
+        android:inputType="textMultiLine"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:layout_marginTop="20dp"
+        android:gravity="top"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/button_delete"
+        android:textSize="20sp"
+        android:layout_below="@+id/editNote4">
+
+    </Button>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_save" />
+
+</RelativeLayout>
