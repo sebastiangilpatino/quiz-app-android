@@ -23,37 +23,94 @@
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
                 tools:text="Q1" />
 
-            <TextView
-                android:id="@+id/text_view_note"
+
+            <LinearLayout
+                android:id="@+id/LLC1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_view_title"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                tools:text="A1" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_view_note2"
+                <TextView
+                    android:id="@+id/text_view_note"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    tools:text="A1" />
+
+
+                <CheckBox
+                    android:id="@+id/text_view_note_correct1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLC2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/text_view_note"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                tools:text="A2" />
+                android:layout_below="@id/LLC1"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_view_note3"
+                <TextView
+                    android:id="@+id/text_view_note2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    tools:text="A2" />
+
+
+                <CheckBox
+                    android:id="@+id/text_view_note_correct2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLC3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/text_view_note2"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                tools:text="A3" />
+                android:layout_below="@id/LLC2"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_view_note4"
+                <TextView
+                    android:id="@+id/text_view_note3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    tools:text="A3" />
+
+                <CheckBox
+                    android:id="@+id/text_view_note_correct3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLC4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/text_view_note3"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                tools:text="A4" />
+                android:layout_below="@id/LLC3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_view_note4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_view_note3"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    tools:text="A4" />
+
+                <CheckBox
+                    android:id="@+id/text_view_note_correct4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A" />
+            </LinearLayout>
+
 
         </RelativeLayout>
 

@@ -32,13 +32,17 @@ class QuestionFragment : BaseFragment() {
             * with the argument it's context object - Inline functions
             * similar like  if(context!=null){}*/
             context?.let {
-                val notes = NoteDatabase(it).getNoteDao().getOneNote()
+                val notes: Note = NoteDatabase(it).getNoteDao().getOneNote()
                 println(notes)
                 question.text = notes.title
                 answer1.text = notes.note
                 answer2.text = notes.note2
                 answer3.text = notes.note3
                 answer4.text = notes.note4
+                isCorrect1.isChecked = notes.noteIsTheCorrect
+                isCorrect2.isChecked = notes.note2IsTheCorrect
+                isCorrect3.isChecked = notes.note3IsTheCorrect
+                isCorrect4.isChecked = notes.note4IsTheCorrect
             }
         }
         homeButton.setOnClickListener {

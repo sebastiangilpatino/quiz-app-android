@@ -11,9 +11,12 @@ it will define the same name in the table column, if you want to provide the dif
 @Entity
 data class Note(
     //@ColumnInfo(name = "notetitle")
-    val title: String,    val note: String,    val note2: String,    val note3: String,    val note4: String
-) : Serializable // need to pass Note entity through Fragments. So that entity should be Serializable
-
+    val title: String, val note: String, val noteIsTheCorrect: Boolean,
+    val note2: String, val note2IsTheCorrect: Boolean,
+    val note3: String, val note3IsTheCorrect: Boolean,
+    val note4: String, val note4IsTheCorrect: Boolean
+) : Serializable
+// need to pass Note entity through Fragments. So that entity should be Serializable
 {
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
