@@ -13,7 +13,7 @@ interface NoteDao {
     @Query("SELECT * FROM NOTE ORDER BY id DESC")
     suspend fun getAllNotes(): List<Note>
 
-    @Query("SELECT * FROM NOTE ORDER BY id DESC LIMIT 1 OFFSET 1")
+    @Query("SELECT * FROM NOTE ORDER BY id ASC LIMIT 1")
     suspend fun getOneNote(): Note
 
     @Insert
