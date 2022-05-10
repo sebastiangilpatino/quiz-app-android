@@ -14,7 +14,9 @@ import kotlinx.coroutines.launch
 class QuestionFragment : BaseFragment() {
     private lateinit var noteList: List<Note>
     private var notes: Note? = null
-    var index: Int = 0
+    private var index = 0
+    private var length = 0
+    private var score = 0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -24,11 +26,12 @@ class QuestionFragment : BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        var score: Int = 0
+
         arguments?.let {
             // get the note value from the HomeFragment using Bundle instance
             index = QuestionFragmentArgs.fromBundle(it).index
             score = QuestionFragmentArgs.fromBundle(it).score
+            length = QuestionFragmentArgs.fromBundle(it).length
         }
         launch {
             /* here context is the getContext() from the Fragment, if the context
@@ -37,14 +40,15 @@ class QuestionFragment : BaseFragment() {
             * similar like  if(context!=null){}*/
             context?.let {
                 noteList = NoteDatabase(it).getNoteDao().getAllNotes()
+                length = noteList.size
                 if (index > noteList.size - 1) {
+                    println(score)
                     val action =
-                        QuestionFragmentDirections.actionFromQuestionToTryAgain(index, score)
+                        QuestionFragmentDirections.actionFromQuestionToTryAgain(score, index, length)
                     Navigation.findNavController(view!!).navigate(action)
                     index = 0
                 }
                 notes = noteList[index]
-                println(notes)
                 question.text = notes!!.title
                 answer1.text = notes!!.note
                 answer2.text = notes!!.note2
@@ -59,17 +63,17 @@ class QuestionFragment : BaseFragment() {
         }
 
         nextButton.setOnClickListener { view ->
+            index++
             if (isCorrect1.isChecked == notes?.noteIsTheCorrect &&
                 isCorrect2.isChecked == notes?.note2IsTheCorrect &&
                 isCorrect3.isChecked == notes?.note3IsTheCorrect &&
                 isCorrect4.isChecked == notes?.note4IsTheCorrect
             ) {
-                score++;
+                score++
             }
             //save db w/ new score
             launch {
                 context?.let {
-                    index++
                     val mNote = Note(
                         notes!!.title, notes!!.note,
                         notes?.noteIsTheCorrect!!, notes!!.note2, notes?.note2IsTheCorrect!!,
@@ -78,7 +82,7 @@ class QuestionFragment : BaseFragment() {
                     )
                     mNote.id = notes!!.id
                     NoteDatabase(it).getNoteDao().updateNote(mNote)
-                    val action = QuestionFragmentDirections.actionQuestionFragmentSelf(index, score)
+                    val action = QuestionFragmentDirections.actionQuestionFragmentSelf(score, index, length)
                     Navigation.findNavController(view).navigate(action)
                 }
             }

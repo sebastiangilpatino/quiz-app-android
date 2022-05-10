@@ -54,29 +54,35 @@
         <action
             android:id="@+id/actionQuestionFragmentSelf"
             app:destination="@id/questionFragment" />
+        <action
+            android:id="@+id/actionFromQuestionToTryAgain"
+            app:destination="@id/tryAgain" />
+        <argument
+            android:name="score"
+            app:argType="integer" />
         <argument
             android:name="index"
             app:argType="integer" />
         <argument
-            android:name="score"
+            android:name="length"
             app:argType="integer" />
-        <action
-            android:id="@+id/actionFromQuestionToTryAgain"
-            app:destination="@id/tryAgain" />
     </fragment>
     <fragment
         android:id="@+id/tryAgain"
         android:name="com.example.notesapp.ui.TryAgain"
         android:label="fragment_try_again"
         tools:layout="@layout/fragment_try_again" >
-        <argument
-            android:name="score"
-            app:argType="integer" />
         <action
             android:id="@+id/actionFromTryAgainToLoginFragment"
             app:destination="@id/loginFragment" />
         <argument
+            android:name="score"
+            app:argType="integer" />
+        <argument
             android:name="index"
+            app:argType="integer" />
+        <argument
+            android:name="length"
             app:argType="integer" />
     </fragment>
 </navigation>

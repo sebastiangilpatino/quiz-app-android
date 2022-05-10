@@ -21,12 +21,18 @@ class TryAgain : BaseFragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_try_again, container, false)
     }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        var score = 0;
+        var score: Int
+        var len: Int
         arguments?.let {
             score = QuestionFragmentArgs.fromBundle(it).score
-            lastScore.text = score.toString()
+            len = QuestionFragmentArgs.fromBundle(it).length
+            totalQuestions.text = len.toString()
+            CorrectAns.text = score.toString()
+            WrongAns.text = (score - len).toString()
+            ScoreIs.text = "${score}/${len}"
         }
 
         tryAgain.setOnClickListener {

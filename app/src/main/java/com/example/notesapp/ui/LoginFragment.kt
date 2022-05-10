@@ -50,7 +50,7 @@ class LoginFragment : BaseFragment() {
 
         userButton.setOnClickListener {
             if (notes != null) {
-                val action = LoginFragmentDirections.actionQuestionFragment(0, 0)
+                val action = LoginFragmentDirections.actionQuestionFragment(0, 0, 0)
                 Navigation.findNavController(it).navigate(action)
             } else {
                 context?.toast("No Questions on DB")
