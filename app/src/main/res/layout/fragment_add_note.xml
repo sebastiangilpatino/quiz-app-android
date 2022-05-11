@@ -6,65 +6,114 @@
     tools:context=".ui.AddNoteFragment">
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
         android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="Question"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large">
-    </EditText>
-
-    <EditText
-        android:id="@+id/editNote"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/title"
-        android:hint="Answer 1"
-        android:inputType="textMultiLine"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="20dp"
-        android:gravity="top"/>
-
-    <EditText
-        android:id="@+id/editNote2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editNote"
-        android:hint="Answer 2"
         android:inputType="text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="20dp"
-        android:gravity="top"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <EditText
-        android:id="@+id/editNote3"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editNote2"
-        android:hint="Answer 3"
-        android:inputType="text"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="20dp"
-        android:gravity="top"/>
+        android:orientation="vertical"
+        android:layout_below="@id/title"
+        android:id="@+id/LL1">
 
-    <EditText
-        android:id="@+id/editNote4"
+        <EditText
+            android:id="@+id/editNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="Answer 1"
+            android:inputType="textMultiLine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <CheckBox
+            android:id="@+id/isCorrect1AddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editNote3"
-        android:hint="Answer 4"
-        android:inputType="textMultiLine"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginTop="20dp"
-        android:gravity="top"/>
+        android:orientation="vertical"
+        android:layout_below="@+id/LL1"
+        android:id="@+id/LL2">
+
+        <EditText
+            android:id="@+id/editNote2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="Answer 2"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <CheckBox
+            android:id="@+id/isCorrect2AddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/LL2"
+        android:id="@+id/LL3">
+
+        <EditText
+            android:id="@+id/editNote3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="Answer 3"
+            android:inputType="text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <CheckBox
+            android:id="@+id/isCorrect3AddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/LL3"
+        android:id="@+id/LL4">
+
+        <EditText
+            android:id="@+id/editNote4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:hint="Answer 4"
+            android:inputType="textMultiLine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <CheckBox
+            android:id="@+id/isCorrect4AddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CheckBox" />
+    </LinearLayout>
 
     <Button
+        android:id="@+id/button_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/LL4"
         android:text="Delete"
-        android:id="@+id/button_delete"
-        android:textSize="20sp"
-        android:layout_below="@+id/editNote4">
+        android:textSize="20sp">
 
     </Button>
 
@@ -72,9 +121,9 @@
         android:id="@+id/button_save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:clickable="true"
         android:src="@drawable/ic_save" />
 
 </RelativeLayout>

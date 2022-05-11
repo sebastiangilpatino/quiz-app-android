@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.QuestionFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/answer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Answer1" />
+
+            <CheckBox
+                android:id="@+id/isCorrect1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Correct answer?" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Answer2" />
+
+            <CheckBox
+                android:id="@+id/isCorrect2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correct answer?" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Answer2" />
+
+            <CheckBox
+                android:id="@+id/isCorrect3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correct answer?" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/answer4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Answer4" />
+
+            <CheckBox
+                android:id="@+id/isCorrect4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correct answer?" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Next" />
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+    </LinearLayout>
+
+</FrameLayout>
