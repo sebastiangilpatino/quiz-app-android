@@ -31,7 +31,7 @@ class TryAgain : BaseFragment() {
             len = QuestionFragmentArgs.fromBundle(it).length
             totalQuestions.text = len.toString()
             CorrectAns.text = score.toString()
-            WrongAns.text = (score - len).toString()
+            WrongAns.text = (len - score).toString()
             ScoreIs.text = "${score}/${len}"
         }
 
